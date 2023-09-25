@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Plat1.props" />
+</Project>

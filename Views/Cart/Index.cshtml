@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Plat1.Models.Plat>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <style>
+    .bord {
+        border: 3px solid green;
+        padding: 5px 20px;
+        font-size: 20px;
+        font-family: verdana;
+    }
+    a:hover{
+        color: white;
+        background-color: orange;
+    }
+</style>
+</head>
+<body>
+    <p>
+        <a asp-action="Create" class="bord">Ajouter plat</a>
+    </p>
+<table class="table">
+    <thead>
+        <tr>
+           
+            <th>
+                   @Html.DisplayNameFor(model => model.NomPlat)
+                   
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+        
+            <td>
+                @Html.DisplayFor(modelItem => item.NomPlat)
+            </td>
+            <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="bord">Edit</a>
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="bord">Delete</a>
+                       
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</body>
+</html>

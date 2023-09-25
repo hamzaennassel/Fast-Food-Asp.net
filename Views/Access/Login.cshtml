@@ -1,0 +1,57 @@
+﻿@model AuthProject.Models.VMLogin;
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="~/temp/StyleSheet.css">
+</head>
+<body>
+
+
+    <form asp-controller="Access" asp-action="login" method="post"  class="cc">
+
+        <div class="bx">
+        <div class="form">
+            <h2 >  Login </h2>
+            <div class="start1">
+        <input type="email" placeholder="Email" asp-for="Email" />
+        <span>Email</span>
+                    <i></i>
+            </div>
+            
+            <div class ="start1">
+        <input type="password" placeholder="Password" asp-for="Password" />
+                <span>Password</span>
+                    <i></i>
+            </div>
+                
+        <label>
+
+            <input type="checkbox" asp-for="KeepLoggedIn" />
+            Keep me logged In.
+
+        </label>
+        <button type="submit">login</button>
+        </div>
+        </div>
+
+
+
+
+        @if (ViewData["ValidateMessage"] != null)
+        {
+            <br />
+            <br />
+            <label>     @ViewData["ValidateMessage"] </label>
+        }
+    </form>
+</body>
+</html>

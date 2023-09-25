@@ -1,0 +1,58 @@
+﻿@model Plat1.Models.Order
+@{
+    ViewData["Title"] = "Order";
+}
+
+<section class="order" id="order">
+
+    <h1 class="heading"> <span>order</span> now </h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img src="~/images/order-img.jpg" alt="">
+        </div>
+
+        <form asp-action="Order">
+
+            <div class="inputBox">
+                <input asp-for="Nom" type="text" placeholder="name">
+                <input asp-for="Email" type="email" placeholder="email">
+            </div>
+
+
+            <div>
+
+            </div>
+
+            <div class="inputBox">
+
+                <input asp-for="Tel" type="tel" placeholder="number">
+                <select name="NomPLat" id="NomPlat" class="plat" style="    border-radius: 5px;
+               width: 365px;
+    margin-top: 10px;
+    height: 40px;
+    font-size: 12px;
+    color: rgba(0,0,0,.6);
+    border: 1px solid rgba(0,0,0,.4);">
+                    <option value=""> food name  </option>
+                    <option asp-for="NomPlat" type value="tasty burger"> tasty burger  </option>
+                    <option asp-for="NomPlat" placeholder="food name" value="pizza"> healty breakfast  </option>
+                    <option asp-for="NomPlat" placeholder="food name" value="pizza"> pizza  </option>
+                    <option asp-for="NomPlat" placeholder="food name" value="pizza"> salades  </option>
+                    <option asp-for="NomPlat" placeholder="food name" value="pizza"> drink  </option>
+                    <option asp-for="NomPlat" placeholder="food name" value="pizza"> cakes  </option>
+                    <option asp-for="NomPlat" placeholder="food name" value="pizza"> choclate  </option>
+
+                </select>
+
+            </div>
+
+            <textarea asp-for="Adresse" placeholder="address"  cols="30" rows="10"></textarea>
+
+            <input  type="submit" value="order now" class="btn">
+
+        </form>
+    </div>
+</section>
+

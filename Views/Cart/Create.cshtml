@@ -1,0 +1,52 @@
+﻿@model Plat1.Models.Plat
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+<body>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        
+                <select name="NomPLat" id="NomPlat" class="plat" style="    border-radius: 5px;
+               width: 365px;
+    margin-top: 10px;
+    height: 40px;
+    font-size: 12px;
+    color: rgba(0,0,0,.6);
+    border: 1px solid rgba(0,0,0,.4);">
+                    <option value=""> food name  </option>
+                    <option asp-for="NomPlat" type value="tasty burger"> tasty burger  </option>
+                    <option asp-for="NomPlat" placeholder="food name" value="pizza"> healty breakfast  </option>
+                    <option asp-for="NomPlat" placeholder="food name" value="pizza"> pizza  </option>
+                    <option asp-for="NomPlat" placeholder="food name" value="pizza"> salades  </option>
+                    <option asp-for="NomPlat" placeholder="food name" value="pizza"> drink  </option>
+                    <option asp-for="NomPlat" placeholder="food name" value="pizza"> cakes  </option>
+                    <option asp-for="NomPlat" placeholder="food name" value="pizza"> choclate  </option>
+
+                </select>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+</body>
+</html>

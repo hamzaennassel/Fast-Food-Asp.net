@@ -1,0 +1,58 @@
+﻿
+<h1>_Layout1</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>complete responsive food website design tutorial </title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+ 
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="~/temp/Style.css">
+    <br /><br /><br /><br />
+ 
+</head>
+<body>
+    <!-- header section starts  -->
+   
+    <header>
+    
+        <a href="#" class="logo"><i class="fas fa-utensils"></i>food</a>
+       
+        <div id="menu-bar" class="fas fa-bars"></div>
+        <nav class="navbar">
+            
+            <a asp-action="Home" asp-controller="Accueil">home</a>
+            <a asp-action="Speciality" asp-controller="Speciality">speciality</a>
+            <a asp-action="Popular" asp-controller="Popular">popular</a>
+            <a asp-action="Gallery" asp-controller="Gallery">gallery</a>
+            <a asp-action="Order" asp-controller="Order">order</a>
+            <a asp-action="Login" asp-controller="Access">log in</a>
+              
+            <a asp-action="Index" asp-controller="Cart"  class="fas fa-shopping-cart" id="icons"></a>
+            
+        </nav>
+        
+    </header>
+
+     <div>
+            @RenderBody();
+        </div>
+
+    <!-- scroll top button  -->
+    <a href="#home" class="fas fa-angle-up" id="scroll-top"></a>
+
+    <!-- loader  -->
+    <div class="loader-container">
+        <img src="images/loader.gif" alt="">
+    </div>
+    <!-- custom js file link  -->
+    <script src="~/temp/JavaScript.js"></script>
+</body>
+</html>
+
